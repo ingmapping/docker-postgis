@@ -1,8 +1,8 @@
 FROM postgres:9.5
 MAINTAINER ingmapping <contact@ingmapping.com>
 
-ENV POSTGIS_MAJOR 2.4
-ENV POSTGIS_VERSION 2.4.4+dfsg-1.pgdg90+1
+ENV POSTGIS_MAJOR 2.2
+ENV POSTGIS_VERSION 2.2
 
 RUN apt-get update \
       && apt-cache showpkg postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR \
