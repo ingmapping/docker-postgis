@@ -3,7 +3,7 @@ Dockerfile for PostGIS
 
 This postgis docker container is based on the [official postgres docker image](https://hub.docker.com/_/postgres/) version 9.5. It creates a template database 'template_postgis' owned by user 'postgres' and installs the extensions of postgis, fuzzystrmatch, postgis_tiger_geocoder and hstore. 
 
-# docker-postgis set up image 
+## docker-postgis set up image 
 
 How to build the image:
 
@@ -15,7 +15,7 @@ or
 ```
 docker pull ingmapping/postgis
 ```
-# docker-postgis run
+## docker-postgis run
 
 How to run the container:
 
