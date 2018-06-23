@@ -20,20 +20,20 @@ docker pull ingmapping/postgis
 How to run the container:
 
 ```
-docker run --name="docker-postgis" -p 25432:5432 -d -t ingmapping/postgis
+docker run --name="docker-postgis" -p 5432:5432 -d -t ingmapping/postgis
 ```
 To store data on the host rather than the container, you can mount your created import directory using -v argument:
 
 ```
 mkdir -p /data/import
-docker run --name="docker-postgis" -p 25432:5432 -v /path/to/desired/import/data:/data/import -d -t ingmapping/postgis
+docker run --name="docker-postgis" -p 5432:5432 -v /path/to/desired/import/data:/data/import -d -t ingmapping/postgis
 ```
 You need to ensure the data import directory has sufficient read/write permissions.
 
 Furthermore, you can use environment variables such as "-e POSTGRES_PASSWORD=password" or "-e POSTGRES_USER=user" to set a password or username, e.g:
 
 ```
-docker run --name="docker-postgis" -p 25432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=user -v /path/to/desired/import/data:/data/import -d -t ingmapping/postgis
+docker run --name="docker-postgis" -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=user -v /path/to/desired/import/data:/data/import -d -t ingmapping/postgis
 ```
 
 
